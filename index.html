@@ -189,8 +189,8 @@
                             <p>I’m eager to start my career in a role that allows me to grow as a Java programmer and network engineer, contributing to projects that combine software development and networking to create real-world solutions.</p>
                         </div>
                         <div class="flex space-x-5 mt-10 scroll-animate delay-200">
-                            <a href="https://linkedin.com/in/yourname" target="_blank" class="text-4xl text-slate-600 hover:text-[#8D234A] transition-transform duration-300 hover:scale-110"><i class="bi bi-linkedin"></i></a>
-                            <a href="https://github.com/yourname" target="_blank" class="text-4xl text-slate-600 hover:text-[#8D234A] transition-transform duration-300 hover:scale-110"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/kyaw-zayar-tun-168695300/" target="_blank" class="text-4xl text-slate-600 hover:text-[#8D234A] transition-transform duration-300 hover:scale-110"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/Kyaw57123" target="_blank" class="text-4xl text-slate-600 hover:text-[#8D234A] transition-transform duration-300 hover:scale-110"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
                     <!-- Right Column: Profile Card -->
@@ -211,21 +211,21 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- project section -->
         <section id="projects" class="py-20 sm:py-24 px-6 sm:px-8 bg-slate-100 overflow-hidden">
             <div class="max-w-7xl mx-auto">
                 <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center scroll-animate"><span class="border-b-4 border-[#8D234A] pb-2 text-slate-900">Featured Projects</span></h2>
                 
                 <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 scroll-animate delay-100">
-                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition duration-300" data-filter="All">All</button>
-                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition duration-300" data-filter="My Special Skills">My Special Skills</button>
-                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition duration-300" data-filter="Final Year">Final Year</button>
-                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition duration-300" data-filter="Second Year">Second Year</button>
-                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition duration-300" data-filter="First Year">First Year</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition duration-300 bg-[#8D234A] text-white" data-filter="All">All</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition duration-300 text-slate-700 hover:bg-[#8D234A] hover:text-white" data-filter="My Special Skills">My Special Skills</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition duration-300 text-slate-700 hover:bg-[#8D234A] hover:text-white" data-filter="Final Year">Final Year</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition duration-300 text-slate-700 hover:bg-[#8D234A] hover:text-white" data-filter="Second Year">Second Year</button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-semibold transition duration-300 text-slate-700 hover:bg-[#8D234A] hover:text-white" data-filter="First Year">First Year</button>
                 </div>
 
                 <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                    <!-- Projects will be dynamically loaded here by JavaScript -->
+                
                 </div>
             </div>
         </section>
@@ -380,190 +380,247 @@
     </a>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
 
-            // --- DATA STORE FOR PROJECTS ---
-            const projectsData = [
-                {
-                    title: 'Final Year Project 1',
-                    image: 'https://placehold.co/600x350/F5F5F5/333333?text=Network+Dashboard',
-                    description: 'A real-time dashboard using Java and SNMP to visualize network health and performance metrics.',
-                    tags: ['Java', 'Final Year', 'Grafana'],
-                    category: ['Final Year']
-                },
-                {
-                    title: 'Final Year Project 2',
-                    image: 'https://placehold.co/600x350/F5F5F5/333333?text=Network+Monitor+App',
-                    description: 'An enhanced network monitoring tool for packet analysis and deep traffic inspection.',
-                    tags: ['C++', 'Final Year', 'Wireshark'],
-                    category: ['Final Year']
-                },
-                {
-                    title: 'Java Project',
-                    image: 'java p.png',
-                    description: 'This is my first Java project, designed to manage student information efficiently.',
-                    tags: ['java', 'My Special Skills'],
-                    category: ['My Special Skills']
-                },
-                {
-                    title: 'Firewall Provisioning',
-                    image: 'https://placehold.co/600x350/F5F5F5/333333?text=Ansible+Provisioning',
-                    description: 'Used Ansible and Python scripting to automate the deployment and configuration of enterprise firewalls.',
-                    tags: ['Ansible', 'Final Year', 'Second Year'],
-                    category: ['Final Year', 'Second Year']
-                },
-                {
-                    title: 'K8s CI/CD Pipeline',
-                    image: 'https://placehold.co/600x350/F5F5F5/333333?text=K8s+CI/CD',
-                    description: 'Designed and implemented a CI/CD pipeline using Jenkins and Kubernetes for zero-downtime Java app updates.',
-                    tags: ['Kubernetes', 'Second Year', 'Helm'],
-                    category: ['Second Year']
-                },
-                {
-                    title: 'Networking with Cisco',
-                    image: 'network.png',
-                    description: 'This was my first university networking project, completed as part of my training as a Network Engineer at StarHub.',
-                    tags: ['Networking', 'My Special Skills',],
-                    category: ['My Special Skills']
-                },
-                {
-                    title: 'K8s CI/CD Pipeline',
-                    image: 'https://placehold.co/600x350/F5F5F5/333333?text=K8s+CI/CD',
-                    description: 'Designed and implemented a CI/CD pipeline using Jenkins and Kubernetes for zero-downtime Java app updates.',
-                    tags: ['Kubernetes', 'Second Year', 'Helm'],
-                    category: ['First Year']
-                },
-                {
-                    title: 'K8s CI/CD Pipeline',
-                    image: 'https://placehold.co/600x350/F5F5F5/333333?text=K8s+CI/CD',
-                    description: 'Designed and implemented a CI/CD pipeline using Jenkins and Kubernetes for zero-downtime Java app updates.',
-                    tags: ['Kubernetes', 'Second Year', 'Helm'],
-                    category: ['First Year']
-                },
-            ];
+        // --- DATA STORE FOR PROJECTS ---
+        const projectsData = [
 
-            // --- REPEATING SCROLL ANIMATION OBSERVER ---
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    } else {
-                        entry.target.classList.remove('is-visible');
-                    }
-                });
-            }, { 
-                threshold: 0.1 
-            });
+            {
+                title: 'Android App',
+                image: 'mealmate.png',
+                description: 'This is my hands-on project experience developing an Android app called MealMate using native Java in Android Studio.',
+                tags: ['native Java', 'My Special Skills'],
+                category: ['My Special Skills','Final Year'],
+                github: 'https://github.com/Kyaw57123/MealMate' 
+            },
+            {
+                title: 'Java Project',
+                image: 'java p.png',
+                description: 'This is my first Java project, designed to manage student information efficiently.',
+                tags: ['java', 'My Special Skills'],
+                category: ['My Special Skills','First Year'],
+                github: 'https://github.com/Kyaw57123/First-Java-program' 
+            },
+            {
+                title: 'Networking with Cisco',
+                image: 'network.png',
+                description: 'This was my first university networking project, completed as part of my training as a Network Engineer at StarHub.',
+                tags: ['Networking', 'My Special Skills',],
+                category: ['My Special Skills','First Year'],
+                github: 'https://github.com/Kyaw57123/Cisco-Packet-Tracer-project' 
+                
+            },
 
-            const observeElements = () => {
-                document.querySelectorAll('.scroll-animate').forEach(el => {
-                    observer.observe(el);
-                });
-            };
-
-            // --- DYNAMIC PROJECT RENDERING ---
-            const projectsGrid = document.getElementById('projects-grid');
+            {
+                title: 'Final Year Project 1',
+                image: 'oricle.png',
+                description: 'I developed a database system for a shop using Oracle Database to efficiently manage and organize business data.',
+                tags: ['Oracle', 'Final Year',],
+                category: ['Final Year'],
+                github: 'https://drive.google.com/drive/folders/1tB4Iq1ChalhijGT3F-yzIMtrF18JeOB_?usp=sharing' 
+            },
+            {
+                title: 'Final Year Project 2',
+                image: 'AI.png',
+                description: 'This is my first AI project, developed in Python, which implements a small Human Activity Recognition system using smartphone sensor data.',
+                tags: ['C++', 'Final Year', 'Wireshark'],
+                category: ['Final Year'],
+                github: 'https://drive.google.com/drive/folders/1K88D8s5d8QUFuo4zBH56K3e0PRK7YTN0?usp=sharing' 
+            },
+            {
+                title: 'Firewall Provisioning',
+                image: 'https://placehold.co/600x350/F5F5F5/333333?text=Ansible+Provisioning',
+                description: 'Used Ansible and Python scripting to automate the deployment and configuration of enterprise firewalls.',
+                tags: ['Ansible', 'Final Year', 'Second Year'],
+                category: ['Final Year'],
+                github: 'https://github.com/yourusername/firewall-provisioning' 
+            },
             
-            function displayProjects(projectList) {
-                projectsGrid.innerHTML = ''; 
-                projectList.forEach((project) => {
-                    const projectCard = document.createElement('div');
-                    projectCard.className = 'project-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 scroll-animate';
-                    
-                    const tagsHTML = project.tags.map(tag => 
-                        `<span class="skill-tag text-xs font-semibold px-3 py-1 bg-slate-200 text-slate-800 rounded-full">${tag}</span>`
-                    ).join(' ');
-
-                    projectCard.innerHTML = `
-                        <img src="${project.image}" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2 text-[#8D234A]">${project.title}</h3>
-                            <p class="text-sm text-slate-600 mb-4">${project.description}</p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                ${tagsHTML}
-                            </div>
-                        </div>
-                    `;
-                    projectsGrid.appendChild(projectCard);
-                });
-                observeElements();
-            }
-
-            // --- PROJECT FILTERING LOGIC ---
-            const filterButtons = document.querySelectorAll('.filter-btn');
             
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const filter = button.getAttribute('data-filter');
-                    
-                    filterButtons.forEach(btn => {
-                        btn.classList.remove('active-filter', 'bg-[#8D234A]', 'text-white');
-                        btn.classList.add('bg-slate-200', 'text-slate-700', 'hover:bg-slate-300');
-                    });
-                    button.classList.add('active-filter', 'bg-[#8D234A]', 'text-white');
-                    button.classList.remove('bg-slate-200', 'text-slate-700');
-                    
-                    const filteredProjects = (filter === 'All') 
-                        ? projectsData 
-                        : projectsData.filter(project => project.category.includes(filter));
-                    
-                    displayProjects(filteredProjects);
-                });
-            });
+            
+            {
+                title: 'K8s CI/CD Pipeline',
+                image: 'https://placehold.co/600x350/F5F5F5/333333?text=K8s+CI/CD',
+                description: 'Designed and implemented a CI/CD pipeline using Jenkins and Kubernetes for zero-downtime Java app updates.',
+                tags: ['Kubernetes', 'Second Year', 'Helm'],
+                category: ['Second Year'],
+                github: 'https://github.com/yourusername/k8s-ci-cd' 
+            },
 
-            // Initial setup
-            displayProjects(projectsData);
-            filterButtons.forEach(btn => {
-                if (btn.getAttribute('data-filter') === 'All') {
-                    btn.classList.add('active-filter', 'bg-[#8D234A]', 'text-white');
+
+            
+            {
+                title: 'K8s CI/CD Pipeline',
+                image: 'https://placehold.co/600x350/F5F5F5/333333?text=K8s+CI/CD',
+                description: 'Designed and implemented a CI/CD pipeline using Jenkins and Kubernetes for zero-downtime Java app updates.',
+                tags: ['Kubernetes', 'Second Year', 'Helm'],
+                category: ['First Year'],
+                github: 'https://github.com/yourusername/k8s-ci-cd-1' 
+            },
+            {
+                title: 'K8s CI/CD Pipeline',
+                image: 'https://placehold.co/600x350/F5F5F5/333333?text=K8s+CI/CD',
+                description: 'Designed and implemented a CI/CD pipeline using Jenkins and Kubernetes for zero-downtime Java app updates.',
+                tags: ['Kubernetes', 'Second Year', 'Helm'],
+                category: ['First Year'],
+                github: 'https://github.com/yourusername/k8s-ci-cd-2' 
+            },
+        ];
+
+        // --- REPEATING SCROLL ANIMATION OBSERVER ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
                 } else {
-                    btn.classList.add('bg-slate-200', 'text-slate-700', 'hover:bg-slate-300');
+                    entry.target.classList.remove('is-visible');
                 }
             });
+        }, { 
+            threshold: 0.1 
+        });
 
-            // --- Mobile Menu Toggle ---
-            const menuToggle = document.getElementById('menu-toggle');
-            const sidebar = document.getElementById('sidebar');
-            const mainContent = document.getElementById('main-content');
-            menuToggle.addEventListener('click', () => sidebar.classList.toggle('-translate-x-full'));
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.innerWidth < 768) sidebar.classList.add('-translate-x-full');
-                });
+        const observeElements = () => {
+            document.querySelectorAll('.scroll-animate').forEach(el => {
+                observer.observe(el);
             });
+        };
 
-            // --- Active Nav Link on Scroll ---
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            window.addEventListener('scroll', () => {
-                let current = 'hero';
-                sections.forEach(section => {
-                    if (window.scrollY >= section.offsetTop - 150) current = section.id;
-                });
-                navLinks.forEach(link => {
-                    link.classList.remove('active-link');
-                    if (link.href.includes(current)) link.classList.add('active-link');
-                });
-            });
-            window.dispatchEvent(new Event('scroll'));
+        // --- DYNAMIC PROJECT RENDERING (FIXED TO INCLUDE GITHUB BUTTON LOGIC) ---
+        const projectsGrid = document.getElementById('projects-grid');
+        
+        function displayProjects(projectList) {
+            projectsGrid.innerHTML = ''; 
+            projectList.forEach((project) => {
+                const projectCard = document.createElement('div');
+                // Added data-category-list for more robust filtering check
+                projectCard.className = 'project-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 scroll-animate';
+                projectCard.setAttribute('data-category-list', project.category.join(' ')); 
+                
+                const tagsHTML = project.tags.map(tag => 
+                    `<span class="skill-tag text-xs font-semibold px-3 py-1 bg-slate-200 text-slate-800 rounded-full">${tag}</span>`
+                ).join(' ');
 
-            // --- Contact Form Submission ---
-            document.getElementById('contact-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const formMessage = document.getElementById('form-message');
-                formMessage.textContent = 'Thank you! Your message has been sent.';
-                this.reset();
-                setTimeout(() => formMessage.textContent = '', 5000);
+                // START OF FIX: Dynamic Button Logic
+                let buttonText;
+                let buttonIconClass;
+                let buttonColorClass = 'bg-slate-800 hover:bg-[#6F1C3A]'; // Default for GitHub
+
+                if (project.github.includes('drive.google.com')) {
+                    // Custom style for Google Drive link
+                    buttonText = 'View Files on Google Drive';
+                    buttonIconClass = 'bi-folder-fill'; 
+                    buttonColorClass = 'bg-amber-600 hover:bg-amber-700'; // Amber/Google Drive color for distinction
+                } else {
+                    // Default style for GitHub link
+                    buttonText = 'View Code on GitHub';
+                    buttonIconClass = 'bi-github';
+                }
+                
+                const projectButtonHTML = `
+                    <a href="${project.github}" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center justify-center w-full mt-4 px-4 py-3 text-sm font-semibold text-white ${buttonColorClass} rounded-lg transition duration-300 transform hover:-translate-y-0.5">
+                        <i class="bi ${buttonIconClass} text-xl mr-2"></i>
+                        ${buttonText}
+                    </a>
+                `;
+                // END OF FIX
+
+                projectCard.innerHTML = `
+                    <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover border-b-4 border-[#8D234A]/80">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-[#8D234A]">${project.title}</h3>
+                        <p class="text-sm text-slate-600 mb-4">${project.description}</p>
+                        <div class="flex flex-wrap gap-2 mb-2">
+                            ${tagsHTML}
+                        </div>
+                        ${projectButtonHTML} 
+                    </div>
+                `;
+                projectsGrid.appendChild(projectCard);
             });
-            
-            // --- Back to Top Button Logic ---
-            const backToTopButton = document.getElementById('back-to-top');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) backToTopButton.classList.add('show');
-                else backToTopButton.classList.remove('show');
+            observeElements();
+        }
+
+        // --- PROJECT FILTERING LOGIC ---
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const filter = e.target.getAttribute('data-filter');
+                
+                // Update button styling
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active-filter', 'bg-[#8D234A]', 'text-white');
+                    btn.classList.add('bg-slate-200', 'text-slate-700', 'hover:bg-slate-300');
+                });
+                e.target.classList.add('active-filter', 'bg-[#8D234A]', 'text-white');
+                e.target.classList.remove('bg-slate-200', 'text-slate-700', 'hover:bg-slate-300');
+                
+                const filteredProjects = (filter === 'All') 
+                    ? projectsData 
+                    : projectsData.filter(project => project.category.includes(filter));
+                
+                displayProjects(filteredProjects);
             });
         });
-    </script>
+
+        // Initial setup
+        displayProjects(projectsData);
+        // Ensure only 'All' button has active styles on load
+        filterButtons.forEach(btn => {
+            if (btn.getAttribute('data-filter') === 'All') {
+                btn.classList.add('active-filter', 'bg-[#8D234A]', 'text-white');
+                btn.classList.remove('bg-slate-200', 'text-slate-700', 'hover:bg-slate-300');
+            } else {
+                btn.classList.add('bg-slate-200', 'text-slate-700', 'hover:bg-slate-300');
+                btn.classList.remove('bg-[#8D234A]', 'text-white');
+            }
+        });
+
+        // --- Mobile Menu Toggle ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('main-content');
+        menuToggle.addEventListener('click', () => sidebar.classList.toggle('-translate-x-full'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) sidebar.classList.add('-translate-x-full');
+            });
+        });
+
+        // --- Active Nav Link on Scroll ---
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = 'hero';
+            sections.forEach(section => {
+                if (window.scrollY >= section.offsetTop - 150) current = section.id;
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active-link');
+                if (link.href.includes(current)) link.classList.add('active-link');
+            });
+        });
+        window.dispatchEvent(new Event('scroll'));
+
+        // --- Contact Form Submission ---
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formMessage = document.getElementById('form-message');
+            formMessage.textContent = 'Thank you! Your message has been sent.';
+            this.reset();
+            setTimeout(() => formMessage.textContent = '', 5000);
+        });
+        
+        // --- Back to Top Button Logic ---
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) backToTopButton.classList.add('show');
+            else backToTopButton.classList.remove('show');
+        });
+    });
+</script>
 </body>
 </html>
